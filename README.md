@@ -160,7 +160,7 @@ tags = {
 - **Use Case**: Ending an index or list definition.
 - **Example**: `ids = [azurerm_virtual_machine.example.id]`
 
-## 25. Left Curly Brace ({})
+## 25. Left Curly Brace ({)
 
 - **Definition**: Begins a block in a map or configuration.
 - **Use Case**: Defining blocks in configurations.
