@@ -34,3 +34,10 @@ subnet_ids = [
   azurerm_subnet.subnet1.id,
   azurerm_subnet.subnet2.id
 ]
+```
+## 5.Forward Slash (/)
+
+- **Definition**: Used in resource names and URLs.
+- **Use Case**: Defining resource names, constructing URLs.
+- **Example**: `name = "/vnet"`
+
