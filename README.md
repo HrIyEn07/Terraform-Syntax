@@ -14,5 +14,5 @@
 resource "azurerm_virtual_machine" "Pulse_vm" {
   name                  = "Pulse-vm"
   location              = "East US"
-  resource_group_name   = "example-resources"
+  resource_group_name   = "Pulse-rg01"
 }
