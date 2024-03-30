@@ -11,7 +11,7 @@
 - **Definition**: Defines blocks for resource configurations, variables, outputs, etc.
 - **Use Case**: Organizing configuration into logical blocks.
 - **Example**:
-  ```hcl
+```hcl
 resource "azurerm_virtual_machine" "pulse_vm" {
   name                  = "Pulse-vm"
   location              = "East US"
