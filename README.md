@@ -12,19 +12,21 @@
 - **Use Case**: Organizing configuration into logical blocks.
 - **Example**:
 
-```hcl
 resource "azurerm_virtual_machine" "pulse_vm" {
   name                  = "Pulse-vm"
   location              = "East US"
   resource_group_name   = "Pulse-rg01"
 }
 
-## 3.Double Quotes (" ")
+## 3. Double Quotes (" ")
 
 - **Definition**: Defines string literals.
 - **Use Case**: Specifying string values.
 - **Example**: `name = "Pulse-vm"`
-## 4.Square Brackets ([])
+
+---
+
+## 4. Square Brackets ([])
 
 - **Definition**: Defines lists of values or indices for resource attributes.
 - **Use Case**: Specifying lists of values, referencing resources in expressions.
