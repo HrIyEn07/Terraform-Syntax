@@ -20,20 +20,8 @@ resource "azurerm_virtual_machine" "pulse_vm" {
 }
 
 ## 3.Double Quotes (" ")
-Definition: Defines string literals.
-Use Case: Specifying string values.
-Example: name = "example-vm"
-Square Brackets ([])
-Definition: Defines lists of values or indices for resource attributes.
-Use Case: Specifying lists of values, referencing resources in expressions.
-Example:
-hcl
-Copy code
-subnet_ids = [
-  azurerm_subnet.subnet1.id,
-  azurerm_subnet.subnet2.id
-]
-Forward Slash (/)
-Definition: Used in resource names and URLs.
-Use Case: Defining resource names, constructing URLs.
-Example: name = "example-vnet"
+
+- **Definition**: Defines string literals.
+- **Use Case**: Specifying string values.
+- **Example**: `name = "Pulse-vm"`
+
