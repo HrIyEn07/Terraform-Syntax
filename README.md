@@ -17,21 +17,18 @@ resource "azurerm_virtual_machine" "pulse_vm" {
   location              = "East US"
   resource_group_name   = "Pulse-rg01"
 }
----
-## 3. Double Quotes (" ")
+```
+## 3.Double Quotes (" ")
 
 - **Definition**: Defines string literals.
 - **Use Case**: Specifying string values.
 - **Example**: `name = "Pulse-vm"`
-
 ---
-
-## 4. Square Brackets ([])
+## 4.Square Brackets ([])
 
 - **Definition**: Defines lists of values or indices for resource attributes.
 - **Use Case**: Specifying lists of values, referencing resources in expressions.
 - **Example**:
-
 ```hcl
 subnet_ids = [
   azurerm_subnet.subnet1.id,
