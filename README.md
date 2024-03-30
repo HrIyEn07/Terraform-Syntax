@@ -11,13 +11,13 @@
 - **Definition**: Defines blocks for resource configurations, variables, outputs, etc.
 - **Use Case**: Organizing configuration into logical blocks.
 - **Example**:
-
+  ```hcl
 resource "azurerm_virtual_machine" "pulse_vm" {
   name                  = "Pulse-vm"
   location              = "East US"
   resource_group_name   = "Pulse-rg01"
 }
-
+---
 ## 3. Double Quotes (" ")
 
 - **Definition**: Defines string literals.
