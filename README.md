@@ -1,12 +1,12 @@
 # Syntax Definitions in Configuration Files
 
-## 1.Equal Sign (=)
+## 1. Equal Sign (=)
 
 - **Definition**: Assigns a value to a variable or attribute.
 - **Use Case**: Setting configuration values, defining resource attributes.
 - **Example**: `location = "East US"`
 
-## 2.Curly Braces ({})
+## 2. Curly Braces ({})
 
 - **Definition**: Defines blocks for resource configurations, variables, outputs, etc.
 - **Use Case**: Organizing configuration into logical blocks.
@@ -18,13 +18,13 @@ resource "azurerm_virtual_machine" "pulse_vm" {
   resource_group_name   = "Pulse-rg01"
 }
 ```
-## 3.Double Quotes (" ")
+## 3. Double Quotes (" ")
 
 - **Definition**: Defines string literals.
 - **Use Case**: Specifying string values.
 - **Example**: `name = "Pulse-vm"`
 ---
-## 4.Square Brackets ([])
+## 4. Square Brackets ([])
 
 - **Definition**: Defines lists of values or indices for resource attributes.
 - **Use Case**: Specifying lists of values, referencing resources in expressions.
@@ -35,37 +35,37 @@ subnet_ids = [
   azurerm_subnet.subnet2.id
 ]
 ```
-## 5.Forward Slash (/)
+## 5. Forward Slash (/)
 
 - **Definition**: Used in resource names and URLs.
 - **Use Case**: Defining resource names, constructing URLs.
 - **Example**: `name = "example/vnet"`
 
-  ## 6.Period (.)
+  ## 6. Period (.)
 
 - **Definition**: Accesses attributes or sub-resources.
 - **Use Case**: Accessing properties of resources or variables.
 - **Example**: `location = azurerm_resource_group.HriyenRg.location`
 
-## 7.Plus Sign (+)
+## 7. Plus Sign (+)
 
 - **Definition**: Used in expressions for addition.
 - **Use Case**: Performing arithmetic operations.
 - **Example**: `size = var.base_count + var.additional_count`
 
-## 8.Minus Sign (-)
+## 8. Minus Sign (-)
 
 - **Definition**: Used in expressions for subtraction or negation.
 - **Use Case**: Subtracting values, negating expressions.
 - **Example**: `count = var.enable_feature ? 1 : 0`
 
-## 9.Asterisk (*)
+## 9. Asterisk (*)
 
 - **Definition**: Used in expressions for multiplication.
 - **Use Case**: Performing multiplication operations.
 - **Example**: `size = var.count * 10`
   
-## 10.Colon (:)
+## 10. Colon (:)
 
 - **Definition**: Separates keys and values in maps or block configurations.
 - **Use Case**: Defining key-value pairs, specifying block attributes.
@@ -76,121 +76,121 @@ tags = {
   app         : "web"
 }
 ```
-## 11.Question Mark (?)
+## 11. Question Mark (?)
 
 - **Definition**: Used in conditional expressions.
 - **Use Case**: Implementing conditional logic.
 - **Example**: `var.enable_feature ? "enabled" : "disabled"`
 
-## 12.Exclamation Mark (!)
+## 12. Exclamation Mark (!)
 
 - **Definition**: Used for negation in some expressions.
 - **Use Case**: Negating expressions, applying logical NOT.
 - **Example**: `count = var.enable_feature ? 1 : 0`
 
-## 13.Semicolon (;)
+## 13. Semicolon (;)
 
 - **Definition**: Used to separate statements or multiple resource configurations.
 - **Use Case**: Separating multiple statements or configurations.
 - **Example**: `depends_on = [azurerm_resource_group.Pulse-rg]`
 
-## 14.Underscore (_)
+## 14. Underscore (_)
 
 - **Definition**: Typically used in variable names or resource identifiers.
 - **Use Case**: Naming variables, resources, or identifiers.
 - **Example**: `name = "example_${var.environment}"`
 
-## 15.Hash (#)
+## 15. Hash (#)
 
 - **Definition**: Used for comments in Terraform code.
 - **Use Case**: Adding comments for documentation or clarity.
 - **Example**: `# This is a comment`
 
-## 16.At Sign (@)
+## 16. At Sign (@)
 
 - **Definition**: Used in provider-specific configurations.
 - **Use Case**: Specifying provider-specific settings or configurations.
 - **Example**: `provider "azurerm" { features {} }`
 
-## 17.Percent Sign (%)
+## 17. Percent Sign (%)
 
 - **Definition**: Used in expressions for modulus.
 - **Use Case**: Calculating the remainder of a division operation.
 - **Example**: `count = length(azurerm_subnet.example) % 2`
 
-## 18.Backslash (\)
+## 18. Backslash (\)
 
 - **Definition**: Typically used as an escape character in string literals.
 - **Use Case**: Escaping special characters in strings.
 - **Example**: `file_path = "C:\\Users\\username\\file.txt"`
 
-## 19.Vertical Bar (|)
+## 19. Vertical Bar (|)
 
 - **Definition**: Used in some expressions and configurations.
 - **Use Case**: Specifying logical OR in expressions.
 - **Example**: `value = var.enable_feature || false`
 
-## 20.Ampersand (&)
+## 20. Ampersand (&)
 
 - **Definition**: Used in some expressions and configurations.
 - **Use Case**: Specifying logical AND in expressions.
 - **Example**: `value = var.enable_feature && true`
 
-## 21.Left Parenthesis (()
+## 21. Left Parenthesis (()
 
 - **Definition**: Begins a group in an expression or function call.
 - **Use Case**: Grouping expressions to control order of operations.
 - **Example**: `count = length(azurerm_subnet.example)`
 
-## 22.Right Parenthesis ())
+## 22. Right Parenthesis ())
 
 - **Definition**: Ends a group in an expression or function call.
 - **Use Case**: Ending a grouped expression.
 - **Example**: `count = (length(azurerm_subnet.example) + 1)`
 
-## 23.Left Square Bracket ([)
+## 23. Left Square Bracket ([)
 
 - **Definition**: Begins an index or defines a list.
 - **Use Case**: Specifying indices or defining lists.
 - **Example**: `ids = [azurerm_virtual_machine.example.id]`
 
-## 24.Right Square Bracket (])
+## 24. Right Square Bracket (])
 
 - **Definition**: Ends an index or defines a list.
 - **Use Case**: Ending an index or list definition.
 - **Example**: `ids = [azurerm_virtual_machine.example.id]`
 
-## 25.Left Curly Brace ({})
+## 25. Left Curly Brace ({})
 
 - **Definition**: Begins a block in a map or configuration.
 - **Use Case**: Defining blocks in configurations.
 - **Example**: `tags = { environment = "production" }`
 
-## 26.Right Curly Brace (})
+## 26. Right Curly Brace (})
 
 - **Definition**: Ends a block in a map or configuration.
 - **Use Case**: Ending a block in configurations.
 - **Example**: `tags = { environment = "production" }`
 
-## 27.Single Quote (')
+## 27. Single Quote (')
 
 - **Definition**: Defines string literals, similar to double quotes.
 - **Use Case**: Specifying string values.
 - **Example**: `name = 'example-vm'`
 
-## 28.Greater Than Sign (>)
+## 28. Greater Than Sign (>)
 
 - **Definition**: Used in some expressions for comparison.
 - **Use Case**: Performing comparison operations.
 - **Example**: `result = var.value > 10`
 
-## 29.Less Than Sign (<)
+## 29. Less Than Sign (<)
 
 - **Definition**: Used in some expressions for comparison.
 - **Use Case**: Performing comparison operations.
 - **Example**: `result = var.value < 10`
 
-## 30.Double Greater Than (>>)
+## 30. Double Greater Than (>>)
 
 - **Definition**: Used in some expressions for shifting bits to the right.
 - **Use Case**: Performing bit-shifting operations.
