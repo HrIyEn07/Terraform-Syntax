@@ -18,7 +18,7 @@ resource "azurerm_virtual_machine" "pulse_vm" {
   location              = "East US"
   resource_group_name   = "Pulse-rg01"
 }
-
+```hcl
 ## 3.Double Quotes (" ")
 
 - **Definition**: Defines string literals.
