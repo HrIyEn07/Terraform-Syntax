@@ -1,0 +1,22 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  - stage: Build_stage
+    jobs:
+      - job: Build_job
+        steps:
+          - task: TerraformInstaller@1
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+            inputs:
+              terraformVersion: 'latest'
